@@ -17,5 +17,7 @@ jobs:
           node-version: '20.x'
       - name: Install Dependencies
         run: yarn install
+      - name: Get Vercel Environment Variables
+        run: yarn vercel pull --environment=production
       - name: Build and Deploy
         run: yarn vercel-build:prod

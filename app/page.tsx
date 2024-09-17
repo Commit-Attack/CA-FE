@@ -12,6 +12,7 @@ export default function Home() {
 
   return (
     <main>
+      <h1>{process.env.NEXT_PUBLIC_ENV_TEST}</h1>
       <Button onClick={handleClick}>count : {count}</Button>
     </main>
   );
