@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "yarn vercel build && yarn vercel deploy --prebuilt",
-    "vercel-build:prod": "yarn vercel build --prod && yarn vercel deploy --prod --prebuilt",
+    "vercel-build": "vercel build && vercel deploy --prebuilt",
+    "vercel-build:prod": "vercel build --prod && vercel deploy --prod --prebuilt",
     "start": "next start",
     "lint": "next lint"
   },
