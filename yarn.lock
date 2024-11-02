@@ -4546,7 +4546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.15.0":
+"chromatic@npm:^11.15.0, chromatic@npm:^11.16.3":
   version: 11.16.3
   resolution: "chromatic@npm:11.16.3"
   peerDependencies:
@@ -4645,6 +4645,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     autoprefixer: "npm:^10.4.20"
+    chromatic: "npm:^11.16.3"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"
     eslint: "npm:^8"
