@@ -25,8 +25,8 @@ jobs:
       - name: Deploy
         id: deploy
         run: |
-          url = yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
-          echo "previewUrl=$url" >> $GITHUB_OUTPUT
+          values=`yarn vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}`
+          echo "previewUrl=$values" >> $GITHUB_OUTPUT
   deploy-storybook:
     runs-on: [ubuntu-latest]
     steps:
