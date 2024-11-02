@@ -6,7 +6,7 @@ jobs:
   build-and-deploy:
     runs-on: [ubuntu-latest]
     outputs:
-      previewUrl: ${{ steps.deploy.previewUrl }}
+      previewUrl: ${{ steps.deploy.outputs.previewUrl }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,10 +48,12 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
     outputs:
-      storybookUrl: ${{ steps.chromatic.storybookUrl }}
+      storybookUrl: ${{ steps.chromatic.outputs.storybookUrl }}
   set-message:
     runs-on: [ubuntu-latest]
     needs: [build-and-deploy, deploy-storybook]
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
