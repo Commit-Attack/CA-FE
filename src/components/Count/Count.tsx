@@ -9,6 +9,7 @@ export default function Count() {
   const handleClick = () => {
     setCount((prev) => prev + 1);
   };
+
   return (
     <>
       <h1>{process.env.NEXT_PUBLIC_ENV_TEST}</h1>
